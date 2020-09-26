@@ -6,7 +6,7 @@ const app = express();
 const server = http.Server(app);
 const io = socketIO(server);
 
-server.listen(3000);
+server.listen(process.env.PORT || 3000);
 
 var Game = require("./gameModule.js");
 var GameState = require("./gameStateModule.js");
